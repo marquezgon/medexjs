@@ -12,3 +12,4 @@ Thumbs.db
 #####################
 /app.js
 /node_modules
+/public/js/vendor
