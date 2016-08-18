@@ -3,6 +3,7 @@ var Schema = mongoose.Schema;
 
 var schema = new Schema({
     motivo: {type: String, required: true},
+    fecha: {type:Date, default: Date.now, required:true},
     patologia_asociada: {type: String},
     antecedentes: {type: String},
     peso: {type: Number},
@@ -12,7 +13,6 @@ var schema = new Schema({
     frecuencia_cardiaca: {type: Number},
     frecuencia_respiratoria: {type: Number},
     glucosa: {type: Number},
-    fecha: {type:Date, default: Date.now},
     doctor: {type: Schema.Types.ObjectId, ref: 'Doctor'},
     paciente: {type: Schema.Types.ObjectId, ref: 'Paciente'}
 });
