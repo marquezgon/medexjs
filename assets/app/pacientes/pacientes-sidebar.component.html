@@ -4,19 +4,28 @@
             <h3 class="text-center h3-sidebar-brand">Datos Generales</h3>
         </li>
         <li>
-            <p class="p-datos-generales"><strong>Nombre: </strong>Gonzalo Marquez Cortes de Puente piedra</p>
+            <p class="p-datos-generales"><strong>Nombre: </strong>{{sPaciente?.nombre}}</p>
         </li>
         <li>
-            <p class="p-datos-generales"><strong>Fecha de Nacimiento: </strong>24/03/1989</p>
+            <p class="p-datos-generales"><strong>Fecha de Nacimiento: </strong>{{sPaciente?.fecha_nacimiento}}</p>
         </li>
         <li>
-            <p class="p-datos-generales"><strong>Sexo: </strong>Masculino</p>
+            <p class="p-datos-generales"><strong>Sexo: </strong>{{sPaciente?.sexo}}</p>
         </li>
         <li>
-            <p class="p-datos-generales"><strong>Tipo de Sangre: </strong>O+</p>
+            <p class="p-datos-generales"><strong>Tipo de Sangre: </strong>{{sPaciente?.tipo_sangre}}</p>
         </li>
         <li>
-            <p class="p-datos-generales"><strong>Dirección: </strong>Calle Ramón Corona #2</p>
+            <p class="p-datos-generales"><strong>Dirección: </strong>{{sPaciente?.direccion}}</p>
+        </li>
+        <li>
+            <p class="p-datos-generales"><strong>Código Postal: </strong>{{sPaciente?.cp}}</p>
+        </li>
+        <li>
+            <p class="p-datos-generales"><strong>Municipio: </strong>{{sPaciente?.municipio}}</p>
+        </li>
+        <li>
+            <p class="p-datos-generales"><strong>Estado: </strong>{{sPaciente?.estado}}</p>
         </li>
     </ul>
 </div>

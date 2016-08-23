@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import {PacientesService} from "./pacientes.service";
+import {Paciente} from "./pacientes";
 
 @Component({
     moduleId: module.id,
@@ -8,7 +10,17 @@ import { Component, OnInit } from "@angular/core";
 })
 export class PacientesSidebarComponent implements OnInit {
 
-    ngOnInit() {
+    sPaciente: Paciente;
 
+    constructor(private pacienteService: PacientesService) {
+
+    }
+
+    ngOnInit() {
+        this.pacienteService.pacienteEmitter.subscribe(
+            data => {
+                this.sPaciente = data
+            }
+        )
     }
 }

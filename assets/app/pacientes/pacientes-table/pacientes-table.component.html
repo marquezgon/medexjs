@@ -8,11 +8,11 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let paciente of pacientes; let i = index;">
+        <tr (click)="selectPaciente(paciente)" *ngFor="let paciente of pacientes; let i = index;">
             <td>{{i}}</td>
-            <td>{{paciente.nombre}}</td>
-            <td>{{paciente.apellidos}}</td>
-            <td>{{paciente.edad}}</td>
+            <td>{{paciente?.nombre}}</td>
+            <td>{{paciente?.apellidos}}</td>
+            <td>{{paciente?.fecha_nacimiento | date:'shortDate'}}</td>
         </tr>
     </tbody>
 </table>

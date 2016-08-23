@@ -142,6 +142,7 @@ body {
   #page-content-wrapper {
     padding: 20px;
     position: relative;
+    float: left;
   }
 
   #wrapper.toggled #page-content-wrapper {
