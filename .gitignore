@@ -14,5 +14,6 @@ Thumbs.db
 #####################
 /node_modules
 /medex-config.js
-/public/js/vendor
+/public/js/*
+
 
