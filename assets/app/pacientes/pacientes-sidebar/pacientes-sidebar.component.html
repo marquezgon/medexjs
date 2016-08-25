@@ -7,7 +7,7 @@
             <p class="p-datos-generales"><strong>Nombre: </strong>{{sPaciente?.nombre}}</p>
         </li>
         <li>
-            <p class="p-datos-generales"><strong>Fecha de Nacimiento: </strong>{{sPaciente?.fecha_nacimiento}}</p>
+            <p class="p-datos-generales"><strong>Fecha de Nacimiento: </strong>{{sPaciente?.fecha_nacimiento | date:'dd/MM/y'}}</p>
         </li>
         <li>
             <p class="p-datos-generales"><strong>Sexo: </strong>{{sPaciente?.sexo}}</p>
