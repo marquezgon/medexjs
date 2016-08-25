@@ -8,10 +8,11 @@ import {HeaderComponent} from "./header.component";
 import {PacientesTableComponent} from "./pacientes/pacientes-table/pacientes-table.component";
 import {PacientesService} from "./pacientes/pacientes.service";
 import {PacientesComponent} from "./pacientes/pacientes.component";
+import {DateToAgePipe} from "./age.pipe";
 
 
 @NgModule({
-    declarations: [AppComponent, PacientesSidebarComponent, PacientesRightSidebarComponent, HeaderComponent, PacientesTableComponent, PacientesComponent],
+    declarations: [AppComponent, PacientesSidebarComponent, PacientesRightSidebarComponent, HeaderComponent, PacientesTableComponent, PacientesComponent, DateToAgePipe],
     imports: [BrowserModule, routing],
     bootstrap: [AppComponent],
     providers: [PacientesService]
