@@ -14,6 +14,10 @@ import {Doctor} from "./auth/doctor";
         .navbar .navbar-nav > li > a {
             color: white;
         }
+        
+        .navbar .navbar-nav > li {
+            z-index: 9999;
+        }
     `],
     directives: [Dropdown]
 })
