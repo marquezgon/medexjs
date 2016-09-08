@@ -6,7 +6,6 @@ import {PacientesSidebarComponent} from "./pacientes/pacientes-sidebar/pacientes
 import {PacientesRightSidebarComponent} from "./pacientes/pacientes-right-sidebar/pacientes-right-sidebar.component";
 import {HeaderComponent} from "./header.component";
 import {PacientesTableComponent} from "./pacientes/pacientes-table/pacientes-table.component";
-import {PacientesService} from "./pacientes/pacientes.service";
 import {PacientesComponent} from "./pacientes/pacientes.component";
 import {DateToAgePipe} from "./age.pipe";
 
@@ -15,7 +14,7 @@ import {DateToAgePipe} from "./age.pipe";
     declarations: [AppComponent, PacientesSidebarComponent, PacientesRightSidebarComponent, HeaderComponent, PacientesTableComponent, PacientesComponent, DateToAgePipe],
     imports: [BrowserModule, routing],
     bootstrap: [AppComponent],
-    providers: [PacientesService]
+    providers: []
 })
 export class AppModule {
 

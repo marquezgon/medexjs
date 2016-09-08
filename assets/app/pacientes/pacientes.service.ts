@@ -1,8 +1,27 @@
 import {EventEmitter} from '@angular/core';
 import {Paciente} from "./pacientes";
+import {Consulta} from "../consultas/consulta";
+
 
 export class PacientesService {
-    pacienteEmitter = new EventEmitter<Paciente>();
+    pacienteEmitter = new EventEmitter();
+    private consultas: Consulta[] = [
+        {
+            doctor: '1',
+            paciente: '1',
+            motivo: 'enfermo',
+            fecha: new Date(),
+            patologia_asociada: 'loco',
+            antecedentes: '',
+            peso: 67,
+            talla: 'large',
+            t_a: 'no se',
+            temperatura: 89,
+            frecuencia_cardiaca: 70,
+            frecuencia_respiratoria: 99,
+            glucosa: 110
+        }
+    ];
     private pacientes: Paciente[] = [
         {
             nombre: 'Gonzalo',
@@ -33,7 +52,8 @@ export class PacientesService {
     }
 
     selectedPaciente(paciente:Paciente) {
-        this.pacienteEmitter.emit(paciente);
+        this.pacienteEmitter.emit({'paciente':paciente, 'consultas': this.consultas});
+
     }
 
 }

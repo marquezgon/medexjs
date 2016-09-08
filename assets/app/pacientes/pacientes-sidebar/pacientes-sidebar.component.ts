@@ -19,7 +19,7 @@ export class PacientesSidebarComponent implements OnInit {
     ngOnInit() {
         this.pacienteService.pacienteEmitter.subscribe(
             data => {
-                this.sPaciente = data
+                this.sPaciente = data.paciente
             }
         )
     }

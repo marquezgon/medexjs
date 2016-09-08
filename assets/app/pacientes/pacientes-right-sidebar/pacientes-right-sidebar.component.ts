@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import {PacientesService} from "../pacientes.service";
+import {Consulta} from "../../consultas/consulta";
 
 @Component({
     moduleId: module.id,
@@ -8,7 +10,17 @@ import { Component, OnInit } from "@angular/core";
 })
 export class PacientesRightSidebarComponent implements OnInit {
 
-    ngOnInit() {
+    consultas: Consulta[];
 
+    constructor(private pacienteService: PacientesService) {
+
+    }
+
+    ngOnInit() {
+        this.pacienteService.pacienteEmitter.subscribe(
+            data => {
+                this.consultas = data.consultas
+            }
+        )
     }
 }
